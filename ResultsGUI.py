@@ -8,7 +8,7 @@ import copy
 from copy import deepcopy
 
 #Third Party Libraries
-#Run: pip install dash dash-bootstrap-components plotly numpy pandas 
+#Run: pip install dash dash-daq dash-bootstrap-components plotly numpy pandas 
 #To get all of the Libraries
 import numpy as np
 import pandas as pd
@@ -1570,7 +1570,7 @@ def execute_script1(n, name, l1_size, l2_size, l3_size, thread_set, interleaved,
     l3_bytes = 0
     
     try:
-        run.run_roofline(name, freq, l1_size, l2_size, l3_size, inst, isa_set, precision_set, num_ld, num_st, thread_set, interleaved, num_ops, l3_bytes, int(dram_bytes), dram_auto, test_type, verbose, set_freq, measure_freq, VLEN, tl1, tl2, plot, 1, "./carm_results")
+        run.run_roofline(name, freq, l1_size, l2_size, l3_size, inst, isa_set, precision_set, num_ld, num_st, thread_set, interleaved, num_ops, l3_bytes, int(dram_bytes), dram_auto, test_type, verbose, set_freq, measure_freq, VLEN, tl1, tl2, plot, 1, "./m_results")
     except Exception as e:
         print("Task was interrupted:", e)
     return no_update
@@ -1769,7 +1769,7 @@ def update_application_dropdown(selected_file):
         return [html.Div(id="application-dropdown", style={"display": "none"}), {'display': 'none'}]
 
  
-    application_file_path = selected_file.replace("roofline", "applications")
+    application_file_path = selected_file.replace("Roofline", "Applications")
     #Read the CSV file and extract data
     data_list = gut.read_application_csv_file(application_file_path)
     
