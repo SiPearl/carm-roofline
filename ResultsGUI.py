@@ -30,7 +30,7 @@ import utils as ut
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
 
-pathway = './carm_results/roofline'
+pathway = './Results/Roofline'
 lines_origin = {}
 lines_origin2 = {}
 
@@ -80,7 +80,7 @@ elif CPU_Type == "riscv64":
 else:
     isa_options = []
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], suppress_callback_exceptions=True, background_callback_manager=background_callback_manager)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], suppress_callback_exceptions=True)#, background_callback_manager=background_callback_manager)
 
 sidebar = dbc.Offcanvas(
     html.Div([
