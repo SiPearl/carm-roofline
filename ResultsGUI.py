@@ -8,12 +8,11 @@ import copy
 from copy import deepcopy
 
 #Third Party Libraries
-#Run: pip install dash dash-bootstrap-components plotly numpy pandas diskcache
+#Run: pip install dash dash-bootstrap-components plotly numpy pandas 
 #To get all of the Libraries
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
-import diskcache
 import dash
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output, State
@@ -30,10 +29,6 @@ import utils as ut
 
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
-
-cache = diskcache.Cache("./cache")
-background_callback_manager = DiskcacheManager(cache)
-
 
 pathway = './carm_results/roofline'
 lines_origin = {}
